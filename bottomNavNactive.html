@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bottom_nav {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            height: auto;
+            background-color: blueviolet;
+            color: white;
+            padding: 20px 0 ;
+            
+        }
+
+        .bottom_nav a{
+            color: bisque;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .bottom_nav a:hover {
+            color: white;
+            background-color: black;            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main_content">
+        <h1>가다나다라마바사</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Aut pariatur cumque veritatis? Cum nihil deserunt optio in nobis culpa, ea maxime. Quas odio architecto neque repudiandae illum beatae reiciendis assumenda.</p>
+    </div>
+
+    <div class="bottom_nav">
+        <a href="#" class="tabact" onclick="myFunction(event)">123</a>
+        <a href="#" class="tabact" onclick="myFunction(event)">123</a>
+        <a href="#" class="tabact" onclick="myFunction(event)">123</a>
+        <a href="#" class="tabact" onclick="myFunction(event)">123</a>
+    </div>
+    
+    <script>
+        function myFucntion(evt){
+    let i, act;
+    
+    act = document.getElementsByClassName("tabact");
+    for (i = 0; i < act.length; i++) {
+        act[i].className = act[i].className.replace(" active", "");
+    }
+
+    evt.currentTarget.className += " active";
+
+}
+    </script>
+
+
+</body>
+</html>
