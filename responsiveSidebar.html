@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+        }
+
+        .sidebar {
+            position: fixed;
+            background: burlywood;
+            width: 200px;
+            height: 100%;
+        }
+
+        .sidebar > span {
+            color: white;
+            display: block;
+            margin: 20px 0;
+            background: blue;
+        }
+        
+
+        .sidebar > span:hover {
+            background: cadetblue;
+            cursor: pointer;
+        }
+
+        .main {
+            margin-left: 200px;
+        }
+
+        /* flex이용해서 미디어스크린해도 되나 */
+
+        @media screen and (max-width: 700px) {
+             .sidebar {
+                 width: 100%;
+                 height: auto;
+                 display: flex;
+                 justify-content: space-around;
+             }
+           
+       
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="sidebar">
+        <span>123</span>
+        <span>123</span>
+        <span>123</span>
+        <span>123</span>
+    </div>
+
+    <div class="main">
+        <h1>Responsive Sidebar Example</h1>
+        <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.
+            We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation 
+            links.</p>
+        <h2>Resize the browser window to see the effect.</h2>    
+    </div>
+
+
+    <script>
+
+    </script>
+
+
+</body>
+</html>
