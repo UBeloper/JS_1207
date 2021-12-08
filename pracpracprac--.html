@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0;
+
+        }
+
+        .sidenav {
+            position: fixed;
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 100%;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .sidenav .closenav {
+            color: white;
+            float: right;
+            position: relative;
+            right: 2px;
+            padding: 20px;
+            display: block;
+            text-decoration: none;
+            transition: 0.5s;
+
+        }
+
+        .sidenav .closenav:hover {
+            background-color: tomato;
+        }
+
+        .sidenav .openmenu {
+            color: white;
+            margin-top: 5rem;
+            padding: 20px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        .sidenav .openmenu:hover {
+            background-color: tomato;
+        }
+
+        .main {
+            margin-left: 200px;
+            padding: 1rem;
+        }
+
+        .opennav {
+            display: inline-block;
+            cursor: pointer;
+            padding: 1rem;
+            background-color: thistle;
+            transition: 0.5s;
+        }
+
+        .opennav:hover {
+            background-color: tomato;
+        }
+
+        .contents {
+            margin-left: 200px;
+            padding: 1rem;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- 사이드바 열닫 -->
+    <div class="sidenav">
+        <a href="#" class="closenav">CLOSENAV</a>
+        <a href="#" class="openmenu" > MENU</a>
+        <a href="#" class="openmenu" >ABOUT</a>
+        <a href="#" class="openmenu" >CONTACT</a>
+    </div>
+
+    <div class="main">
+        <h1 class="opennav">OPENNAV</h1>
+        <h1>동해물과 백두산이</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam harum qui eveniet sint.
+            Dicta neque assumenda libero repellat dolor sequi quidem quis tempora nesciunt, repudiandae voluptatem
+            molestias debitis quia molestiae!</p>
+    </div>
+
+    <!-- 메뉴 내용 열닫 -->
+    <div class="contents" id="가">
+        <h1> 가나다 </h1>
+    </div>
+
+    <div class="contents" id="A">
+        <h1> ABCD </h1>
+    </div>
+
+    <div class="contents" id="num">
+        <h1> 1289FSUDNOI </h1>
+    </div>
+
+    
+    <script>
+        // sidenav 열닫
+        const closenav = document.querySelector(".closenav");
+        const opennav = document.querySelector(".opennav");
+        console.log(closenav.innerText);
+
+        function handleCloseNav() {
+            document.querySelector(".sidenav").style.width = "0";
+            document.querySelector(".main").style.marginLeft = "0";
+        }
+
+        function handleOpenNav() {
+            document.querySelector(".sidenav").style.width = "200px";
+            document.querySelector(".main").style.marginLeft = "200px";
+        }
+
+        closenav.addEventListener("click", handleCloseNav);
+        opennav.addEventListener("click", handleOpenNav);
+
+        // 메뉴 클릭 - active + display block/none
+
+        // 각각의 메뉴를 눌렀을 때(메뉴에 클릭 펑션) div 애들이 display none
+        const openmenu = document.querySelectorAll(".openmenu");
+        const contents = document.querySelectorAll(".contents");
+        console.log(openmenu);
+        console.log(contents);
+        
+        function disnone() {
+            console.log(contents.innerText);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
