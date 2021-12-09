@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 미디어쿼리 플렉스사용해서 이미지 width 100%로 응용 !!!!~ -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            border: solid 1px black;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .column {
+        
+        }
+        
+@media screen and (max-width : 650px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="row">
+
+        <div class="column">
+            <img src="img/team1.jpg">
+            <div class="container">
+                <h2>Jane Doe</h2>
+                <p class="title">CEO & Founder</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>example@example.com</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="img/team2.jpg">
+            <h2>Mike Ross</h2>
+            <div class="container"></div>
+            <p class="title">Art Director</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>example@example.com</p>
+            <p><button class="button">Contact</button></p>
+        </div>
+
+        <div class="column">
+            <img src="img/team3.jpg">
+            <div class="container">
+                <h2>John Doe</h2>
+                <p class="title">Designer</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>example@example.com</p>
+                <p><button class="button">Contact</button></p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
